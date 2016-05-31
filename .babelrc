@@ -1,4 +1,6 @@
 {
-  "optional": ["runtime"],
-  "stage": 0
+  "presets": [
+    "react",
+    "es2015"
+  ]
 }

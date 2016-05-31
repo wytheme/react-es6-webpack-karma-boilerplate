@@ -1,10 +1,14 @@
-import React, {Component} from 'react';
+// node
+// vendors
+import React from 'react';
+// project
+import Menu from './components/Menu';
 
-export default class App extends Component {
-  render() {
-    return (
-      // Add your component markup and other subcomponent references here.
-      <h1>Hello, World!</h1>
-    );
-  }
-}
+const App = () => (
+  <div className="mainApp">
+    <Menu />
+    <h1>Hello, World!</h1>
+  </div>
+);
+
+export default App;
