@@ -1,5 +1,7 @@
 # NOT MAINTAINED: React ES6 Webpack Karma Boilerplate
 
+# Use [create-react-app](https://github.com/facebookincubator/create-react-app) instead
+
 Boilerplate for kick starting a project with the following technologies:
 * [React](https://github.com/facebook/react)
 * [ES6 with Babel](http://babeljs.io)
