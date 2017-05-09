@@ -1,4 +1,10 @@
-# NOT MAINTAINED: React ES6 Webpack Karma Boilerplate
+#
+
+注意：这个项目主要面向于 **React 0.14.x**
+
+WARNING: the project is aim to **React 0.14.x**
+
+-----
 
 # Use [create-react-app](https://github.com/facebookincubator/create-react-app) instead
 

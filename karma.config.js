@@ -4,12 +4,21 @@ webpackConfig.module.loaders = [
   {
     test: /\.(js|jsx)$/, exclude: /(bower_components|node_modules)/,
     loader: 'babel-loader'
-  }
+  },
+  {
+    test: /\.json$/,
+    loader: 'json',
+  },
 ];
 webpackConfig.module.postLoaders = [{
   test: /\.(js|jsx)$/, exclude: /(node_modules|bower_components|tests)/,
   loader: 'istanbul-instrumenter'
 }];
+webpackConfig.externals = {
+  'react/lib/ExecutionEnvironment': true,
+  'react/lib/ReactContext': true,
+  // 'react-addons-test-utils': true,
+}
 
 module.exports = function (config) {
   config.set({
@@ -19,7 +28,7 @@ module.exports = function (config) {
       'tests/**/*_spec.js'
     ],
     plugins: [
-      webpack, 
+      webpack,
       'karma-jasmine',
       'karma-chrome-launcher',
       'karma-firefox-launcher',
@@ -27,7 +36,7 @@ module.exports = function (config) {
       'karma-coverage',
       'karma-spec-reporter'
     ],
-    browsers: [ 'PhantomJS' ],
+    browsers: [ 'Chrome' ],
     preprocessors: {
       'tests/**/*_spec.js': ['webpack'],
       'src/**/*.js': ['webpack']
